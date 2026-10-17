@@ -1,0 +1,574 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #ea580c;
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 15%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+#menu-icon {
+  font-size: 2rem;
+  color: var(--main-color);
+  display: none;
+}
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+span {
+  background: linear-gradient(270deg, #df8908 10%, #ff1d15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+.gradient-btn {
+  background: linear-gradient(270deg, var(--main-color) 10%, #ff1d15);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 3rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.gradient-btn:hover {
+  transform: scale(1.05);
+}
+section {
+  min-height: 100vh;
+  padding: 10rem 15%;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.home-content h1 {
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+.home-content h3 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+.home-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.home-img img {
+  width: 28vw;
+  border-radius: 50%;
+  margin: -30px;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+.home-img img:hover {
+  box-shadow: 0 0 25px var(--main-color);
+  box-shadow: 0 0 35px var(--main-color);
+  box-shadow: 0 0 60px var(--main-color);
+}
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+.social-icons a:hover {
+  color: var(--text-color);
+  background-color: var(--main-color);
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Base button styling */
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover state */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px var(--main-color),
+    0 0,
+    0 0 30px var(--main-color);
+}
+.btn-group a:nth-of-type(2) {
+  background-color: black;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover {
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+  color: black;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
+}
+
+.about-img img {
+  width: 26vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover {
+  box-shadow:
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+
+.about-content h2 {
+  font-size: 7rem;
+  text-align: left;
+}
+
+.about-content p {
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+.about-content .btn {
+  margin-top: 2rem;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+
+/* Tools Section Styling */
+.tools {
+  background-color: var(--bg-color);
+  text-align: center;
+  min-height: auto;
+  padding: 5rem 15% 2rem 15%; /* This fixes the massive void in your third screenshot */
+  scroll-margin-top: 15rem; /* This fixes the navbar overlap when you click the link */
+}
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.tool-badge {
+  background-color: var(--second-bg-color);
+  border: 2px solid var(--main-color);
+  color: var(--text-color);
+  padding: 1.2rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 3rem;
+  cursor: default;
+  transition: 0.3s ease-in-out;
+
+  /* NEW FLEXBOX RULES */
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem; /* Creates a perfect space between the icon and text */
+}
+
+/* Styles the icon specifically */
+.tool-badge i {
+  font-size: 2.4rem; /* Makes the icon slightly larger than the text */
+  color: var(--main-color); /* Makes the icons pop with your brand orange */
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover effects */
+.tool-badge:hover {
+  background-color: var(--main-color);
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.tool-badge:hover i {
+  color: black; /* Turns the icon black so it doesn't vanish into the orange background */
+}
+
+.services {
+  background-color: var(--bg-color);
+  color: white;
+  padding-top: 10rem; /* Increased from 2rem for perfect breathing room */
+  padding-bottom: 5rem;
+}
+
+.services h2 {
+  color: var(--text-color);
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.service-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--main-color);
+  min-height: 480px; /* Changed from height to min-height */
+  height: auto; /* Lets the box grow with the text */
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.service-box:hover {
+  background: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+.service-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5rem;
+}
+
+.service-info h4 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  min-height: 90px; /* Locks the box height regardless of 1 or 2 lines */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  margin: 2rem 0; /* Locks the spacing between the icon and the paragraph */
+}
+.service-info h4.no-wrap {
+  white-space: nowrap;
+}
+
+.service-info p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.service-info i {
+  font-size: 8rem;
+}
+.service-box,
+.service-info {
+  min-width: 0;
+}
+
+.projects {
+  background-color: var(--second-bg-color);
+}
+
+.projects-box {
+  display: flex; /* Switched from grid to flex */
+  flex-wrap: wrap; /* Allows cards to wrap to the next row */
+  justify-content: center; /* Automatically centers the bottom row */
+  gap: 3rem; /* Handles both row and column gaps */
+}
+.project-card {
+  flex: 0 1 calc(33.333% - 2rem);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* This forces the button to the bottom */
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 1.5rem; /* Reduced from 2rem to save space */
+  padding: 3rem 2rem; /* Reduced from 5rem to make cards less tall */
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow:
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color);
+  transform: scale(1);
+}
+.project-card img {
+  width: 100%;
+  height: 150px; /* or whatever uniform height you prefer */
+  object-fit: fill; /* crops/zooms so it fills without distortion */
+  border-radius: 2rem;
+}
+
+.project-card img.poster-img {
+  object-fit: cover; /* Prevents squishing by cropping the edges instead */
+  object-position: center; /* Keeps the most important part of the image centered */
+}
+
+.project-card h3 {
+  font-size: 3rem;
+}
+.project-card p {
+  font-size: 1.6rem;
+}
+.project-card .btn {
+  margin-top: 2rem; /* You can increase this to 3rem if you want even more space */
+}
+.contact {
+  background-color: var(--bg-color);
+}
+.contact h2 {
+  margin-bottom: 3rem;
+}
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+.footer {
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+.footer .social-icons {
+  text-align: center;
+}
+.footer ul {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.footer ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a {
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover {
+  border-bottom: 3px solid var(--main-color);
+}
+.footer .contact2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+.footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.about-mobile {
+  display: none; /* Hides the short text on large screens */
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 15rem 10%;
+    min-height: auto;
+  }
+
+  #menu-icon {
+    display: block;
+    font-size: 3.5rem; /* Increased from 2rem */
+    cursor: pointer;
+  }
+
+  .header {
+    padding: 4rem 10%;
+  }
+  /* nav panel */
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+  }
+
+  /* nav links */
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+
+  /* toggle nav open */
+  .navbar.active {
+    display: block;
+  }
+
+  /* hide gradient button */
+  .gradient-btn {
+    display: none;
+  }
+
+  /* other responsive tweaks */
+  .home {
+    flex-direction: column-reverse;
+    margin: 0;
+    gap: 5rem;
+  }
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .home-img img {
+    width: 56vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .about img {
+    width: 65vw;
+  }
+  .about-desktop {
+    display: none; /* Hides the long text on phones */
+  }
+  .about-mobile {
+    display: block; /* Shows the short text on phones */
+  }
+
+  .service-info {
+    padding: 3rem 2rem;
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
+}
